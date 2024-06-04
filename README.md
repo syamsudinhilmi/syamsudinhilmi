@@ -8,7 +8,7 @@
 ## ⚡ Languange and Tools
 Here are a few of the technologies I've been used
 
-<p>
+<p align = "center">
   <img src="https://github.com/tandpfun/skill-icons/blob/main/icons/Kotlin-Dark.svg" width="40">
   <img src="https://github.com/tandpfun/skill-icons/blob/main/icons/Java-Dark.svg" width="40">
   <img src="https://github.com/tandpfun/skill-icons/blob/main/icons/HTML.svg" width="40">
@@ -16,7 +16,7 @@ Here are a few of the technologies I've been used
   <img src="https://github.com/tandpfun/skill-icons/blob/main/icons/JavaScript.svg" width="40">
   <img src="https://github.com/tandpfun/skill-icons/blob/main/icons/Python-Dark.svg" width="40">
   <img src="https://github.com/tandpfun/skill-icons/blob/main/icons/Figma-Dark.svg" width="40">
-
+  <img src="https://github.com/tandpfun/skill-icons/blob/main/icons/Git.svg" width="40">
 </p>
 
 
