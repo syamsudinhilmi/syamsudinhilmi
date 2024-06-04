@@ -1,0 +1,468 @@
+:root {
+  --primary: #00629b;
+  --secondary: #00A3FF;
+  --bg: #22242c;
+  --button: #b6c4fd;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg);
+  color: #fff;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent white background */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  backdrop-filter: blur(10px); /* Optional: adds a blur effect to the background */
+}
+
+.navbar .navbar-logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.navbar .navbar-nav {
+  margin-left: auto; /* Pushes the links to the right */
+}
+
+.navbar .navbar-nav a {
+  color: #fff;
+  display: inline-block;
+  font-size: 1.2rem;
+  margin: 0 1rem;
+}
+
+.navbar .navbar-nav a:hover {
+  color: var(--button);
+}
+
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.15rem solid var(--button);
+  transform: scaleX(0);
+  transition: 0.1s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra a {
+  font-size: 1.5rem;
+  color: #fff;
+  margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+  color: var(--button);
+}
+
+
+#hamburger-menu {
+  display: none;
+}
+
+/* Landing Page */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center horizontally */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero .content {
+  padding: 1.4rem 7%;
+  max-width: 60rem;
+}
+.hero .content .hero-info {
+  display: flex;
+  align-items: center;
+  flex-direction: column; /* Align items in a column */
+  text-align: center; /* Center align text */
+}
+.hero .content .hero-photo {
+  width: 200px; /* Adjust the size of the photo as needed */
+  border-radius: 50%;
+  margin-bottom: 1rem; /* Adjust the spacing between photo and text */
+}
+.hero .content h1 {
+  font-size: 5rem;
+  color: #fff;
+  line-height: 1.2;
+}
+
+.hero .content h1 span {
+  color: var(--secondary);
+}
+.hero .content p {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  line-height: 1.4;
+}
+
+/* Social Media Icons */
+.socials {
+  margin-top: 2rem; /* Adjust the spacing from the hero text */
+  text-align: center; /* Center align social media icons */
+}
+
+.socials a {
+  margin-right: 1rem; /* Adjust the spacing between icons */
+  color: #fff;
+  font-size: 1.7rem;
+  transition: color 0.3s ease;
+}
+
+.socials a:last-child {
+  margin-right: 0; /* Remove margin from the last icon */
+}
+
+.socials a:hover {
+  color: var(--secondary);
+}
+
+
+.about,
+.menu,
+.contact {
+  padding: 8rem 7% 1.4rem;
+}
+.about h2,
+.menu h2,
+.contact h2 {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+.about h2 span,
+.menu h2 span,
+.contact h2 span {
+  color:var(--secondary);
+}
+
+
+/* About Section */
+.about {
+  text-align: center;
+}
+
+.about-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-image {
+  flex: 1;
+  max-width: 50%;
+  margin-right: 3rem; /* Sesuaikan jarak antara gambar dan teks */
+}
+
+.about-image img {
+  max-width: 100%; /* Pastikan gambar tidak melebihi lebar parent */
+  height: auto; /* Menjaga aspek rasio gambar */
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-text p {
+  max-width: 60rem;
+  margin: auto;
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+.about-text a {
+  display: block; /* Ensure the icons are on a new line */
+  margin-top: 1.5rem; /* Adjust the top margin as needed */
+}
+
+.about-text a img {
+  margin: 0 0.5rem; /* Add horizontal spacing between icons */
+}
+
+
+
+/* Project Section */
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-card {
+  margin: 2rem;
+  padding: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 0.5rem;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-card img {
+  width: 100%;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.project-card h3 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: var(--secondary);
+}
+
+.project-card p {
+  font-size: 1.4rem;
+  color: #ccc;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .about-image {
+    max-width: 100%;
+    margin-right: 0;
+    margin-bottom: 2rem;
+  }
+}
+
+
+
+
+
+/* Contact section */
+.contact {
+  text-align: center;
+}
+
+.contact h2 {
+  margin-bottom: 2rem;
+}
+
+.contact p {
+  text-align: center;
+  max-width: 40rem;
+  margin: auto;
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+.contact-info {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* Ensures items wrap to the next line on smaller screens */
+  margin-top: 2rem;
+}
+
+.contact-info .info {
+  flex: 1 1 30%; /* Allows each item to grow and shrink, with a base width of 30% */
+  margin: 1rem;
+  text-align: center;
+  align-items: center;
+  max-width: 250px;
+  box-sizing: border-box;
+}
+
+.contact-info .info a {
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.contact-info .info a:hover {
+  color: var(--secondary);
+}
+
+.contact-info .info p {
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .contact-info .info {
+    flex: 1 1 100%; /* Stacks the items vertically, each taking full width */
+    max-width: none;
+  }
+}
+
+
+
+/* Footer */
+footer {
+  background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent white background */
+  text-align: center;
+  padding: 1rem 0 2rem;
+  margin-top: 3rem;
+  backdrop-filter: blur(10px); /* Optional: adds a blur effect to the background */
+}
+
+footer .socials {
+  padding: 1rem 0;
+}
+
+footer .socials a {
+  color: #fff;
+  margin: 1rem;
+  font-size: 1.5rem;
+}
+
+footer .socials a:hover,
+footer .links a:hover {
+  color: var(--bg);
+}
+
+footer .links {
+  margin-bottom: 1.5rem;
+}
+
+footer .links a {
+  color: #fff;
+  padding: 0.5rem 1rem;
+}
+
+footer .credit a {
+  color: var(--secondary);
+  font-weight: 700;
+}
+
+
+/* Media Queries */
+
+/* Laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+/* Tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  #hamburger-menu {
+    display: inline-block;
+  }
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: rgba(31, 33, 43, 80%);
+    /* width: 28rem; */
+    height: 100vh;
+    transition: 0.4s ease-in-out;
+  }
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+  .navbar .navbar-nav a {
+    /* display: block; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1.5rem;
+    padding: 1rem;
+    font-size: 1.5rem;
+  }
+
+  .navbar .navbar-nav a::after {
+    border-bottom: none;
+    transform-origin: 0 0;
+  }
+  .navbar .navbar-nav a:hover {
+    color: #fff;
+    background-color: var(--secondary);
+    transition: 0.1s ease-in-out;
+    border-radius: 0.5rem;
+    /* transform: scaleX(0.1); */
+  }
+  .about .row,
+  .about .row2 {
+    flex-wrap: wrap;
+  }
+  .about .row .about-img img,
+  .about .row2 .about-img2 img {
+    height: 24rem;
+    object-fit: cover;
+    object-position: center;
+  }
+  .about .row .content,
+  .about .row2 .content {
+    padding: 0;
+  }
+  .about .row .content h3,
+  .about .row2 .content h3 {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 2rem;
+  }
+  .about .row .content p,
+  .about .row2 .content p {
+    text-align: center;
+    font-size: 1.6rem;
+  }
+  .menu p {
+    font-size: 1.6rem;
+  }
+
+}
+/* Mobile */
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+/* flex-wrap: wrap; */
+
+/* Catatan */
+/* margin: block; untuk membuat menu kebawah */
+
+/* Catatan Font */
+/* Ukuran font logo 2rem */
+/* Ukuran navbar 1.2rem*/
+/* Ukuran icon 1.5rem */
+/* Ukuran h1 title 5rem */
+/* Ukuran paragraf & button 1.5rem */
+/* Ukuran navbar hamburger 1.5rem */
